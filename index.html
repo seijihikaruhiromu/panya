@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="a">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css?family=Anton rel="stylesheet">
+
+        <title>BANJIRO</title>
+
+
+        <style type="text/css">/*画像自動切り替わる*/
+            #photo {
+                width:100%;
+                height:580px;
+                margin: 0 auto;
+                position:absolute;
+                z-index: 10;
+                             
+
+            }
+            #photo img {
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 10;
+            }
+
+            
+            </style>
+            
+            
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+            $(function(){
+                var setImg = '#photo';
+                var fadeSpeed = 1600;
+                var switchDelay = 5000;
+            
+                $(setImg).children('img').css({opacity:'0'});
+                $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+            
+                setInterval(function(){
+                    $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+                },switchDelay);
+            });
+            </script>
+            
+    </head>
+    <body>
+
+        <div id="tbl-bdr">
+            <table width="100%" height="50">  
+                <tboy><tr>     <!--リンク元-->
+                    <th><a href="main.html">TOP</a></th>
+                    <th><a href="syouhin.html">商品一覧</a></th>
+                    <th><a href="gyarari.html">ギャラリー</a></th>
+                    <th><a href="konseputo.html">コンセプト</a></th>
+                    <th><a href="tenpojouhou.html">店舗情報</a></th>
+                    <th><a href="karenda.html">カレンダー</a></th>
+                    <th><a href="yoyaku.html">商品予約</a></th>
+                    
+                </tr>
+                </tboy>
+            </table>
+    
+    
+            <style>
+                 table,th {
+            border-collapse: collapse;
+            border: solid 5px rgb(255, 217, 0);
+            }
+        
+                a{
+                    color:rgb(201, 115, 35);
+                    text-decoration:underline;
+                }
+            </style>
+        </div>
+
+
+
+        <div id="photo">
+            <img src="/kaken/syasin/panhaikei.jpg" width="100%" height="100%" alt="">
+            <img src="/kaken/syasin/panhaikei2.jpg" width="100%" height="100%" alt="">
+            <img src="/kaken/syasin/panhaikei3.jpg" width="100%" height="100%" alt="">
+            <img src="/kaken/syasin/panhaikei4.jpg" width="100%" height="100%" alt="">
+
+        </div>
+            
+        <div class="midashi">
+            <p>BANJIRO</p>
+        </div>
+        <style>
+            .midashi{
+                color: #000; 
+                text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF, 
+                            -1px 1px 0 #FFF, 1px -1px 0 #FFF, 
+                            0px 1px 0 #FFF,  0-1px 0 #FFF, 
+                            -1px 0 0 #FFF, 1px 0 0 #FFF; 
+
+            }
+
+            .midashi p{
+                font-family: 'Anton', sans-serif;
+                position: absolute;
+                top: 30%;
+                left: 40%;
+                font-size:6vw;
+                z-index:30;
+                
+            }
+
+        </style>
+
+
+        <div class="kuuhaku">
+            <img src="/kaken/syasin/真っ白.png"width="100%"height="580px" alt="エラー">
+        </div>
+
+
+
+
+
+<div class="maeoki">
+    <p>パンをこねり続けて４０００年、</p>
+    <p>「毎朝、起きるのが楽しみになる」 </p>
+    <p>そんな食パンをお届けできるよう</p>
+    <p>こころを込めて焼き上げています。</p>
+</div>
+
+<style>
+    .maeoki {
+        color:rgb(186, 204, 25);
+        text-align: center;
+
+    }
+    .maeoki p{
+        font-size:3vw;
+        z-index:20;
+    }
+</style>
+
+            
+        
+        
+        
+
+    </body>
+
+</html>
+
